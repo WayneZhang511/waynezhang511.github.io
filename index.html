@@ -2,7 +2,7 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Yufeng's Homepage</title>
-		<link rel="shortcut icon" href="me.ico" />
+		<link rel="shortcut icon" href="head.jpg" />
 		<style type="text/css">
 a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
@@ -11,8 +11,11 @@ a:active {text-decoration: none;}
 		</style>
 		<script type="text/javascript">
 var menus;
+var menufonts;
+var taglist=["Home","Education","Publications","Research","Photographs","Resume"];
 function init() {
 	menus=document.getElementsByClassName("menu");
+	menufonts=document.getElementsByClassName("menufont");
 }
 function submenuSet(num) {
 	menus[num].style.backgroundColor="#eeeeee";
@@ -20,25 +23,116 @@ function submenuSet(num) {
 function submenuUnset(num) {
 	menus[num].style.backgroundColor="#ffffff";
 }
+function submenuClick(num) {
+	var i;
+	for (i=0;i<6;++i) menufonts[i].innerHTML=taglist[i];
+	if (num==5) {window.location.href="Resume_yufengzhang.pdf";return;}
+	menufonts[num].innerHTML="►"+taglist[num];
+	window.location.href="#"+taglist[num];
+}
 		</script>
 	</head>
 	<body onLoad="init();">
 		<div style="position:fixed; top:0; right:70%; width:410; text-align:center;">
 			<div style="height:40px;"></div>
-			<div><img src="yufengzhang.png" style="position:relative; width:200px;"></div>
-			<div><font face="calibri" color="#000000"><h1>Yufeng Zhang</h1></font></div>
-			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(0) onmouseleave=submenuUnset(0) onclick="window.location.href='index.html';return false"><font face="calibri" size="5" color="#0088CC">►Home&nbsp&nbsp</font></div>
-			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(1) onmouseleave=submenuUnset(1) onclick="window.location.href='';return false"><font face="calibri" size="5" color="#0088CC">Education</font></div>
-			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(2) onmouseleave=submenuUnset(2) onclick="window.location.href='';return false"><font face="calibri" size="5" color="#0088CC">Research</font></div>
-			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(3) onmouseleave=submenuUnset(3) onclick="window.location.href='publications.html';return false"><font face="calibri" size="5" color="#0088CC">Publications</font></div>
-			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(4) onmouseleave=submenuUnset(4) onclick="window.location.href='';return false"><font face="calibri" size="5" color="#0088CC">Honors</font></div>
-			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(5) onmouseleave=submenuUnset(5) onclick="window.location.href='Resume_yufengzhang.pdf';return false"><font face="calibri" size="5" color="#0088CC">Resume</font></div>
+			<div><img src="yufengzhang.png" style="position:relative; width:180px;"></div>
+			<div><font face="calibri" color="#000000"><h1>Yufeng Zhang</h1></font>
+			<font face="calibri" size="3" color="#000000"><b>zhang_yufeng@sjtu.edu.cn</b><br/><br/></font></div>
+			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(0) onmouseleave=submenuUnset(0) onclick=submenuClick(0) ><font class="menufont" face="calibri" size="5" color="#0088CC">►Home</font></div>
+			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(1) onmouseleave=submenuUnset(1) onclick=submenuClick(1)><font class="menufont" face="calibri" size="5" color="#0088CC">Education</font></div>
+			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(2) onmouseleave=submenuUnset(2) onclick=submenuClick(2)><font class="menufont" face="calibri" size="5" color="#0088CC">Publications</font></div>
+			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(3) onmouseleave=submenuUnset(3) onclick=submenuClick(3)><font class="menufont" face="calibri" size="5" color="#0088CC">Research</font></div>
+			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(4) onmouseleave=submenuUnset(4) onclick=submenuClick(4)><font class="menufont" face="calibri" size="5" color="#0088CC">Photographs</font></div>
+			<div class="menu" style="height:50px; line-height:50px; width:100%" onmouseover="this.style.cursor='hand'" onmouseenter=submenuSet(5) onmouseleave=submenuUnset(5) onclick=submenuClick(5)><font class="menufont" face="calibri" size="5" color="#0088CC">Resume</font></div>
 		</div>
 		<div style="position:absolute; top:0; left:30%; width:900; text-align:left;">
-			<div style="height:40px;"></div>
-			<font face="calibri" color="#000000"><h1>Yufeng Zhang</h1></font>
-			<font face="calibri" size="5" color="#000000"><b>zhang_yufeng@sjtu.edu.cn</b><br/></font>
-			<font face="calibri" size="5" color="#000000"><br/>Under maintenance. Welcome to contact me via email.<br/></font>
+			<div id="Home">
+				<font face="calibri" size="6" color="#000000"><br/>Home<br/></font>
+				<font face="calibri" size="4" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am a senior student from Shanghai Jiao Tong University (SJTU) and currently intern at <i>Intel Asia Pacific R&D Center</i>. Since things related to artificial intelligence have never failed to fascinate me, I chose Automation as my major and have developed several intelligent systems and robots during my college years. Recently, I specifically focus on the research of Computer Vison and Machine Learning, wanting to enable the AI to perceive and understand our complex world more intelligently. I hope to develop even more intelligent systems based on computer vision and deep learning to enhance the ability of clinical medicine to diagnose and predict diseases in my future career. Except for programming and computer engineering, I also love to travel, photograph and play sports.<br/><br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here are some tags to get a quick impression on me:<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#Imagenet'>Computer Vision</a>, <a href='#Robot'>Intelligent System</a>, <a href='#Photographs'>Photograph</a></font>
+				<br/><br/><br/><br/>
+			</div>
+			<div id="Education">
+				<font face="calibri" size="6" color="#000000"><br/>Education<br/></font>
+				<table border="0"><tr><td><img src="sj.png" width="200"></td><td><div style="position:relative; top:0;">
+				<font face="calibri" size="4" color="#000000">
+				<b>Shanghai Jiao Tong University</b><br/>
+				School of Electronic Information and Electrical Engineering<br/>
+				<b>Bachelor of Engineering in Automation</b> (expected June, 2017)<br/>
+				<b>Rank:</b> Top 10%<br/>
+				<b>Awards:</b><br/>
+				GuangHua Educational Scholarship, Top 4 in Dept. of Automation<br/>
+				Arowana Corporation Scholarship, Top 3 in Dept. of Automation<br/>
+				Meritorious Winner, Mathematical Contest in Modeling (MCM)<br/>
+				Excellent Student Cadre, Shanghai Jiao Tong University<br/></font>
+				<div style="position:absolute; top:0; text-align:right; width:660px;"><font face="calibri" size="4" color="#000000"><b>Sep 2013 - Present</b><br/><br/><br/><br/><br/>2016<br/>2015<br/>2015<br/>2014<br/></font></div></div></td></tr></table>
+				<br/><br/><br/><br/>
+			</div>
+			<div id="Publications">
+				<font face="calibri" size="6" color="#000000"><br/>Publications</font>
+				<font face="calibri" size="4" color="#000000"><br/><br/>•	Zhiqin Chen, <b>Yufeng Zhang</b>, Hesheng Wang, Weidong Chen. Real-time tag recognition based on morphology and local contrast. In <i>IEEE International Conference on Real-time Computing and Robotics (RCAR),</i> 2016. </font>
+				[<a href='RTRBOMALC.pdf'>pdf</a>]
+				<font face="calibri" size="4" color="#000000"><br/><br/>•	Zhiqin Chen, <b>Yufeng Zhang</b>, Liqing Zhang. Dynamic gesture recognition in real-time based on generated datasets. Submitted to <i> IEEE Conference on Computer Vision and Pattern Recognition (CVPR),</i> 2017. </font>
+				[<a href='DGRIRBOGD.pdf'>pdf</a>]
+				<font face="calibri" size="6" color="#000000"><br/><br/>Patents</font>
+				<font face="calibri" size="4" color="#000000"><br/><br/>•	<b>Co-inventor. </b>Intelligence Library Management Robot. <i>National Invention Patent,</i> No. 201510257563.3 </font>
+				[<a href='http://www2.soopat.com/Patent/201510257563'>Link</a>]
+				<font face="calibri" size="4" color="#000000"><br/><br/>•	<b>Co-inventor. </b>Self-acting Book Manipulating Mechanism. <i>National Invention Patent,</i> No. 201510563923.2 </font>
+				[<a href='http://www2.soopat.com/Patent/201510563923'>Link</a>]
+				<font face="calibri" size="4" color="#000000"><br/><br/>•	<b>Co-inventor. </b>Automatic Device for Book Managing. <i>National Invention Patent,</i> No. 201510563922.8 </font>
+				[<a href='http://www2.soopat.com/Patent/201510563922'>Link</a>]
+				<br/><br/><br/><br/>
+			</div>
+			<div id="Research">
+				<font face="calibri" size="6" color="#000000"><br/>Research<br/></font>
+				<font face="calibri" size="4" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I enjoy the innovative process of using artificial intelligence and programming to solve problems. This passion has translated into my participation in numerous research projects and internships during my college years.<br/><br/></font>
+				<table border="0">
+				<tr id="Imagenet"><td><img src="in.png" width="200"></td><td><div style="position:relative; top:0;">
+				<font face="calibri" size="4" color="#000000">
+				<b>Scene Classification</b><br/>
+				<i>Competition: IMAGENET Large Scale Visual Recognition Challenge 2016 (ILSVRC 2016)</i><br/>
+				Yufeng Zhang, Yucheng Xing, Zhiqin Chen<br/>
+				<font face="calibri" size="1" color="#000000"><br/></font>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I was elected as the leader of our lab’s team for the challenge. Firstly, after evaluation on several neural networks, I selected the Inception-v3 net and fine-tuned it on MXNet with Places365-Challenge dataset, achieving 84.76% accuracy (the trained model can be downloaded <a href='places2-inception-v3-0020.params' download='places2-inception-v3-0020.params'>here</a>). Then, I proposed a fusion-feature neural network to classify scenes with 86.26% accuracy and my teammates in charge of processing the training datasets using Python. Finally, we combined our models together with multiple strategies to accomplish the accuracy at 87.34% (2.33% higher than the baseline).<br/><br/></font></div></td></tr>
+				<tr><td><img src="vdgr.png" width="200"></td><td><div style="position:relative; top:0;">
+				<font face="calibri" size="4" color="#000000">
+				<b>Video-based Dynamic Gesture Recognition</b><br/>
+				<i>Key Laboratory of Shanghai Education Commission for Intelligent Interaction and Cognitive Engineering, Department of Computer Science and Engineering, Shanghai Jiao Tong University</i><br/>
+				Zhiqin Chen, Yufeng Zhang<br/>
+				<font face="calibri" size="1" color="#000000"><br/></font>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unlike the method-based VIVA challenge, this unique research project aimed at recognizing dynamic gestures in complex backgrounds without the help of depth information. We developed a real-time dynamic gesture recognition system based on modified YOLO and discrete-HMM. Meanwhile, a novel method to artificially generate datasets by synthesizing target objects with background images was proposed and it proved to be effective for training models and saving time. Ultimately, with videos recorded in complex backgrounds, the mAP of static gesture detection achieved 94.85%, with all dynamic gestures recognizable. It led to a manuscript submitted to CVPR 2017 and currently under peer review [<a href='DGRIRBOGD.pdf'>pdf</a>].<br/><br/></font></div></td></tr>
+				<tr id="Robot"><td><img src="diilmr.png" width="200"></td><td><div style="position:relative; top:0;">
+				<font face="calibri" size="4" color="#000000">
+				<b>Design and Implementation of Intelligent Library Management Robot</b><br/>
+				<i>MOE Key Laboratory of System Control and Information Processing, Department of Automation, Shanghai Jiao Tong University</i><br/>
+				Yufeng Zhang, Zhiqin Chen, Pengfei Su<br/>
+				<font face="calibri" size="1" color="#000000"><br/></font>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An intelligent library management robot which could automatically pick up or return books was developed from scratch by our team. We designed and manufactured the components of the robot and led to three National Invention Patents (see <a href='#Publications'>patents</a>). Then we implemented the motion control and serial communication between computer and Arduino Microcontroller to control the robot. Meanwhile, new algorithms for book identification and robot localization based on tag recognition was proposed and implemented by OpenCV, which led to a publication in IEEE-RCAR 2016 [<a href='RTRBOMALC.pdf'>pdf</a>]. Finally, the intelligent robot came to life and led to ‘Excellence’ award in SJTU (watch demo <a href='DIILMR.mp4'>here</a>).<br/><br/></font></div></td></tr>
+				<tr><td><img src="rgblhc.png" width="200"></td><td><div style="position:relative; top:0;">
+				<font face="calibri" size="4" color="#000000">
+				<b>Robotic Grasping Based on Learned Hand-eye Coordination</b><br/>
+				<i>Software and Services Group (SSG), Intel Asia Pacific R&D Center</i><br/>
+				Yufeng Zhang, Junyi Xie<br/>
+				<font face="calibri" size="1" color="#000000"><br/></font>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Different from the traditional control methods of manipulator by hard-programming, this research aimed at training the robotic arm to grasp items by itself through learned hand-eye coordination. I developed and trained the deep neural network whose inputs are pairs of 3D images captured by Realsense and vectors of the manipulator’s motors. I also implemented the whole flow of the robotic arm to attempt to grasp items automatically, which was guided by the possibility of success provided by the trained deep neural network.<br/><br/></font></div></td></tr>
+				<tr><td><img src="cdf.png" width="200"></td><td><div style="position:relative; top:0;">
+				<font face="calibri" size="4" color="#000000">
+				<b>Cyber DIP – An intelligent iPad manipulator</b><br/>
+				<i>Course: Fundamentals of Digital Image Processing</i><br/>
+				Yufeng Zhang<br/>
+				<font face="calibri" size="1" color="#000000"><br/></font>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this project, I implemented an intelligent iPad manipulator. It can automatically find the application of Five-In-A-Row game on iPad and win over the application’s AI in the game (watch demo <a href='CD-F.mp4'>here</a>). The whole work of image processing was implemented by OpenCV, and my AI algorithms for Five-In-A-Row game and control of manipulator were based on C++. What’s more, what is fun is that the intelligent manipulator can also arrange applications randomly placed on iPad into different folders with regards to their colors (watch demo <a href='CD-A.mp4'>here</a>).<br/><br/></font></div></td></tr></table>
+			</div>
+			<div id="Photographs">
+				<font face="calibri" size="6" color="#000000"><br/>Photographs<br/></font>
+				<font face="calibri" size="4" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am so passionate to learn more about our beautiful world and make acquaintance with amazing friends through travelling. Till now, I have visited over 60 cities in 6 countries. It is travelling that makes me fall in love with photographing. Meanwhile, photographing also motivates me to go on my passion for travelling. Here are some selected photographs of mine.<br/><br/></font>
+				<div style="text-align:center;"><img src="danshui.png" width="80%"></div> 
+				<font face="calibri" size="4" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is scenery of sky and wharf after a heavy rain at dusk, when I was traveling on August 21, 2015 in Tamsui District, New Taipei. (It was admitted by Bigstock, a commercial photography website. ID: 102820598)<br/><br/></font>
+				<div style="text-align:center;"><img src="harbin.jpg" width="80%"></div> 
+				<font face="calibri" size="4" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It was captured in Harbin Ice and Snow World, where large scale of Ice sculptures were on display. In the soft light, a couple was selecting souvenirs to wish a good year from the fairy of Ice and Snow.<br/><br/></font>
+				<font face="calibri" size="4" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please feel free to contact me for more information via email: zhang_yufeng@sjtu.edu.cn.<br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COPYRITGHT © Yufeng Zhang. Last update: 2017.01.<br/> <br/></font>
+			</div>
 		</div>
 	</body>
 </html>
